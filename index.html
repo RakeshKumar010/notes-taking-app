@@ -22,9 +22,9 @@
 
             text-align: center;
         }
-      
-        #logo{
-            width: 10vw;
+
+        #logo {
+            width: 5vw;
             padding-left: 2vw;
             margin-top: -5vh;
             margin-bottom: -3vh;
@@ -37,17 +37,29 @@
             box-shadow: 1px 0px 8px rgb(116, 104, 104);
             border-radius: 10px;
             text-align: center;
-          
-            
+
+
 
         }
-       
-        #delete{
+
+        #delete {
             width: 4%;
             float: left;
             margin-top: -10vh;
             margin-left: 5vw;
             border-radius: 2vw;
+        }
+
+        @media only screen and (max-width: 360px) {
+            #logo {
+                width: 15vw;
+            }
+
+            #delete {
+                width: 10vw;
+                border-radius: 20px;
+                /* margin-top: 1vh; */
+            }
         }
     </style>
 
@@ -56,114 +68,117 @@
 <body>
 
     <div id="head">
-        <h1>Note taking app<img  id="logo" src="image/logo.jpg"
-             alt="" onclick="funNmae()"></h1>
-       
+        <h1>Note taking app<img id="logo" src="image/logo.jpg" alt="" onclick="funNmae()"></h1>
+
     </div>
-    
+
     <div id="se1" class="section">
         <h1 id="dh">Notes 1</h1>
         <p id="dt">
         </p>
-        <img onclick="divdelete1()" id="delete" src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
-        
+        <img onclick="divdelete1()" id="delete"
+            src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
+
     </div>
     <div id="se2" class="section">
         <h1 id="dh2">Notes 2</h1>
         <p id="dt2">
         </p>
-        <img onclick="divdelete2()" id="delete" src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
+        <img onclick="divdelete2()" id="delete"
+            src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
     </div>
     <div id="se3" class="section">
         <h1 id="dh3">Notes 3</h1>
         <p id="dt3">
         </p>
-        <img onclick="divdelete3()" id="delete" src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
+        <img onclick="divdelete3()" id="delete"
+            src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
     </div>
     <div id="se4" class="section">
         <h1 id="dh4">Notes 4</h1>
         <p id="dt4">
         </p>
-        <img onclick="divdelete4()" id="delete" src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
+        <img onclick="divdelete4()" id="delete"
+            src="image/png-clipart-logo-trademark-brand-delete-button-miscellaneous-text-thumbnail.png" alt="">
     </div>
 
 </body>
 <script>
 
-   let dh=document.getElementById('dh');
-    let dt=document.getElementById('dt');
-    
-    
-    let dh2=document.getElementById('dh2');
-    let dt2=document.getElementById('dt2');
-   
-    let dh3=document.getElementById('dh3');
-    let dt3=document.getElementById('dt3');
+    let dh = document.getElementById('dh');
+    let dt = document.getElementById('dt');
 
-    let dh4=document.getElementById('dh4');
-    let dt4=document.getElementById('dt4');
 
-    let se1=document.getElementById('se1');
-    let se2=document.getElementById('se2');
-    let se3=document.getElementById('se3');
-    let se4=document.getElementById('se4');
-    
- function funNmae(){
-        
-        
-    window.open("files/note.html","","width=500px,height=400px,left=400px,top=250px");
-    
-    
-    
-}
-if(typeof Object.keys(localStorage)[0] == 'string'){
-  
-    dh.innerHTML=Object.keys(localStorage)[0];
-    dt.innerHTML=Object.values(localStorage)[0];
-}
+    let dh2 = document.getElementById('dh2');
+    let dt2 = document.getElementById('dt2');
 
-if(typeof Object.keys(localStorage)[1] == 'string'){
-    
-    dh2.innerHTML=Object.keys(localStorage)[1];
-     dt2.innerHTML=Object.values(localStorage)[1];
-}
+    let dh3 = document.getElementById('dh3');
+    let dt3 = document.getElementById('dt3');
 
-if(typeof Object.keys(localStorage)[2] == 'string'){
-   
-    dh3.innerHTML=Object.keys(localStorage)[2];
-    dt3.innerHTML=Object.values(localStorage)[2];
-}
+    let dh4 = document.getElementById('dh4');
+    let dt4 = document.getElementById('dt4');
 
-if(typeof Object.keys(localStorage)[3] == 'string'){
-    
-    dh4.innerHTML=Object.keys(localStorage)[3];
-    dt4.innerHTML=Object.values(localStorage)[3];     
-}  
+    let se1 = document.getElementById('se1');
+    let se2 = document.getElementById('se2');
+    let se3 = document.getElementById('se3');
+    let se4 = document.getElementById('se4');
 
-function divdelete1(){
-    localStorage.removeItem(Object.keys(localStorage)[0]);
-    se1.style.display="none";
+    function funNmae() {
 
-}
-function divdelete2(){
-    localStorage.removeItem(Object.keys(localStorage)[1]);
-    se2.style.display="none";
 
-}
-function divdelete3(){
-    localStorage.removeItem(Object.keys(localStorage)[2]);
-    se3.style.display="none";
-
-}
-function divdelete4(){
-    localStorage.removeItem(Object.keys(localStorage)[3]);
-    se4.style.display="none";
-
-}
+        window.open("files/note.html", "", "width=500px,height=400px,left=400px,top=250px");
 
 
 
-    
+    }
+    if (typeof Object.keys(localStorage)[0] == 'string') {
+
+        dh.innerHTML = Object.keys(localStorage)[0];
+        dt.innerHTML = Object.values(localStorage)[0];
+    }
+
+    if (typeof Object.keys(localStorage)[1] == 'string') {
+
+        dh2.innerHTML = Object.keys(localStorage)[1];
+        dt2.innerHTML = Object.values(localStorage)[1];
+    }
+
+    if (typeof Object.keys(localStorage)[2] == 'string') {
+
+        dh3.innerHTML = Object.keys(localStorage)[2];
+        dt3.innerHTML = Object.values(localStorage)[2];
+    }
+
+    if (typeof Object.keys(localStorage)[3] == 'string') {
+
+        dh4.innerHTML = Object.keys(localStorage)[3];
+        dt4.innerHTML = Object.values(localStorage)[3];
+    }
+
+    function divdelete1() {
+        localStorage.removeItem(Object.keys(localStorage)[0]);
+        se1.style.display = "none";
+
+    }
+    function divdelete2() {
+        localStorage.removeItem(Object.keys(localStorage)[1]);
+        se2.style.display = "none";
+
+    }
+    function divdelete3() {
+        localStorage.removeItem(Object.keys(localStorage)[2]);
+        se3.style.display = "none";
+
+    }
+    function divdelete4() {
+        localStorage.removeItem(Object.keys(localStorage)[3]);
+        se4.style.display = "none";
+
+    }
+
+
+
+
 </script>
 
 </html>
