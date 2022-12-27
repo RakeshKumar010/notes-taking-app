@@ -1,0 +1,54 @@
+body {
+    background: url("https://wallpapers.com/images/hd/4k-bright-city-lights-a94oba3aund01051.jpg");
+}
+
+#head {
+    padding: 1vw;
+    color: white;
+    box-shadow: 1px 0px 8px rgb(116, 104, 104);
+    border-radius: 10px;
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+    text-align: center;
+}
+
+#logo {
+    width: 5vw;
+    padding-left: 2vw;
+    margin-top: -5vh;
+    margin-bottom: -3vh;
+    border-radius: 20%;
+}
+
+.section {
+    padding: 10px;
+    color: white;
+    box-shadow: 1px 0px 8px rgb(116, 104, 104);
+    border-radius: 10px;
+    text-align: center;
+
+
+
+}
+
+#delete {
+    width: 4%;
+    float: left;
+    margin-top: -10vh;
+    margin-left: 5vw;
+    border-radius: 2vw;
+}
+
+@media only screen and (max-width: 360px) {
+    #logo {
+        width: 15vw;
+    }
+
+    #delete {
+        width: 10vw;
+        border-radius: 20px;
+        /* margin-top: 1vh; */
+    }
+}

@@ -4,66 +4,7 @@
 <head>
   <title>Note taking app</title>
 
-  <style>
-    body::-webkit-scrollbar {
-      display: none;
-    }
-
-    body {
-      background-color: rgb(128, 145, 145);
-      overflow-y: scroll;
-    }
-
-    #div1 {
-      text-align: center;
-      box-shadow: 1px 1px 8px black;
-      padding: 3vh 0vw 5vh 0vw;
-      height: 90vh;
-      margin: 0vh 2vw 0vh 2vw;
-      /* border: 10px solid black; */
-      border-radius: 2vw;
-    }
-
-    #div1 h1 {
-      background-color: rgb(80, 183, 231);
-      padding: 1vw;
-      /* margin-bottom: 2vh; */
-      /* width: 100px; */
-      margin-bottom: 5vh;
-      font-size: 5vw;
-    }
-
-    #topic {
-      padding: 2vw;
-      background-color: rgb(28, 45, 53);
-      width: 70vw;
-      color: wheat;
-      margin-bottom: 5vh;
-      border-radius: 2vw;
-    }
-
-    #note {
-      padding: 2vw;
-      background-color: rgb(28, 45, 53);
-      width: 70vw;
-      height: 20vh;
-      color: rgb(128, 125, 125);
-      margin-bottom: 1vh;
-      border-radius: 2vw;
-    }
-
-    p {
-
-      font-size: 3vw;
-    }
-
-    button {
-      padding: 3vw;
-      width: 50vw;
-      border-radius: 2vw;
-      background-color: gray;
-    }
-  </style>
+  <link rel="stylesheet" href="note.css">
 </head>
 
 <body>
@@ -73,30 +14,14 @@
     <textarea name="name" id="note" cols="35" rows="5" required>Enter your note</textarea>
 
     <p>© Developed by <a href="https://www.linkedin.com/in/rakesh-kumar-146238220/">Raesh kumar</a>.</p>
-    <button onclick="dataFtch()">Submit</button>
+    <button id="btn" onclick="dataFtch()">Submit</button>
   </div>
 
 
 
 
 
-  <script>
-    let topic = document.getElementById('topic');
-    let note = document.getElementById('note');
-
-    let wtopic;
-    let wnote;
-
-    function dataFtch() {
-      wtopic = topic.value;
-      wnote = note.value;
-      localStorage.setItem(wtopic, wnote);
-      alert("successful")
-      window.close()
-
-    }
-
-  </script>
+  <script src="note.js"></script>
 </body>
 
 </html>
